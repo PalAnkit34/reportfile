@@ -1,0 +1,304 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Saarthi | Play Your Day</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fbf8ff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#e6c500",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0efff",
+                        "surface-container-high": "#e6e6fa",
+                        "on-secondary-fixed": "#410004",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#715f00",
+                        "outline": "#7e775f",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#930014",
+                        "surface-dim": "#d8d8ec",
+                        "on-tertiary-fixed": "#001356",
+                        "primary-container": "#ffda00",
+                        "on-tertiary-fixed-variant": "#0035be",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191b29",
+                        "surface-tint": "#6e5d00",
+                        "on-surface": "#191b29",
+                        "inverse-surface": "#2e2f3e",
+                        "outline-variant": "#cfc6ab",
+                        "on-primary-fixed-variant": "#534600",
+                        "error": "#ba1a1a",
+                        "primary": "#6e5d00",
+                        "on-surface-variant": "#4c4732",
+                        "inverse-primary": "#e6c500",
+                        "surface-container-low": "#f4f2ff",
+                        "on-primary-fixed": "#221b00",
+                        "primary-fixed": "#ffe260",
+                        "background": "#fbf8ff",
+                        "secondary-fixed": "#ffdad7",
+                        "secondary-container": "#db3237",
+                        "surface": "#fbf8ff",
+                        "surface-container": "#edecff",
+                        "surface-variant": "#e1e1f5",
+                        "tertiary-fixed": "#dde1ff",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "secondary": "#b71422",
+                        "on-tertiary-container": "#174cf2",
+                        "tertiary-fixed-dim": "#b8c3ff",
+                        "tertiary-container": "#d5daff",
+                        "tertiary": "#3B4CF5",
+                        "surface-container-highest": "#e1e1f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gutter": "24px",
+                        "card-padding": "32px",
+                        "border-width": "3px",
+                        "section-margin": "64px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Manrope", "sans-serif"],
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .neo-shadow {
+            box-shadow: 4px 4px 0px 0px #191b29;
+        }
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #191b29;
+        }
+        .neo-shadow-hover:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px 0px #191b29;
+        }
+        .neo-shadow-active:active {
+            transform: translate(0px, 0px);
+            box-shadow: 0px 0px 0px 0px #191b29;
+        }
+        .bento-yellow { background-color: #ffda00; color: #191b29; }
+        .bento-red { background-color: #b71422; color: white; }
+        .bento-blue { background-color: #3B4CF5; color: white; }
+        .bento-purple { background-color: #8D49FF; color: white; }
+        .bento-white { background-color: #ffffff; color: #191b29; }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style><style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:auto!important}</style></head>
+<body class="bg-surface-bright text-on-background font-sans selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface-bright fixed top-0 w-full z-50 border-b-[3px] border-on-background shadow-[4px_4px_0px_0px_#191b29] flex items-center justify-between px-6 h-20">
+<div class="flex items-center gap-3">
+<img alt="Saarthi Logo" class="h-10 w-10 border-[2px] border-on-background rounded-lg neo-shadow bg-on-background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsYvKSRGb18g3KoZ1EuZeB-h4u0ecBexfTTlK2XlLGzTMNymIH9-bHbxtbbssPwWqObIYNVXMhMHhBNZ32Gu9Vr2gaReuI3uJohH08BANjxq479uHbfoqXJ2EX_Vo93RxBhUPsnBwZILo8ENzB8oUPdBxDWDVhUUlnIxNO4w07BfTaIe075fyVjcrITAOBC9hbtOhMqzCR_5UtQFWUY_qfTnqjE8G8lCGfHsZy0ExR-7LJT_WDm5qXyttWiGG0b8snF-ddH4eq6dmZ">
+<span class="font-bold text-2xl tracking-tighter text-on-background">Saarthi</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-primary-container p-2 border-[3px] border-on-background neo-shadow neo-shadow-active transition-all">
+<span class="material-symbols-outlined text-on-background">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-4 space-y-12">
+<!-- Hero Section -->
+<section class="flex flex-col gap-8 py-8">
+<div class="bg-white border-[3px] border-on-background p-6 neo-shadow">
+<div class="inline-block bg-tertiary text-white font-bold text-xs px-3 py-1 border-[2px] border-on-background mb-4 rotate-[-2deg]">
+                LEVEL UP YOUR LIFE
+            </div>
+<h1 class="text-4xl font-extrabold leading-tight mb-4">
+                Tasks = Games. <br>
+<span class="text-secondary">Play to Win.</span>
+</h1>
+<p class="text-on-surface-variant mb-8">
+                Stop dreading your to-do list. Saarthi transforms every project into a high-stakes adventure where productivity is the ultimate high score.
+            </p>
+<button class="w-full bg-primary-container py-4 border-[3px] border-on-background neo-shadow neo-shadow-hover neo-shadow-active transition-all font-bold uppercase" onclick="document.getElementById('ready-to-play').scrollIntoView({ behavior: 'smooth' })">
+                Start Playing Now
+            </button>
+</div>
+<div class="relative bg-tertiary-container border-[3px] border-on-background neo-shadow aspect-[0.75] flex items-center justify-center p-8 overflow-hidden">
+<img class="w-full h-auto max-w-[240px] rounded-[2.5rem] border-[6px] border-on-background neo-shadow transform rotate-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHIrstl8jxaMwPk1iuOjNRyjDJ6kpaaUpheSzhc7or5HQqhRRNuOIXjHiw3RIUsei_Ite_OixxcFvCEHb1Fq5yx9NlTtTlF2FkSHynrk92-bNt9vALrWz8OjkZvoqnTmovpWn1pvCXp8QeV3ShvGPopcH31fzuAMEb0UEKj88B3q_QW0YGiwR5ijdZNJaSZONiOsEV1_gIDphtzHbsXKCWebur7D1ndYNJf1pwprhqWt_y8RfTBeKwXb0_nL00vzlobJZmKOmWxP_M">
+<div class="absolute top-6 right-6 bg-secondary text-white p-3 border-[3px] border-on-background rounded-full neo-shadow animate-bounce">
+<span class="material-symbols-outlined text-2xl">rocket_launch</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid Features -->
+<section class="space-y-6">
+<h2 class="text-3xl font-extrabold text-center">Power-Ups</h2>
+<!-- Big Feature Card -->
+<div class="bento-yellow border-[3px] border-on-background p-6 neo-shadow relative overflow-hidden">
+<h3 class="text-2xl font-bold mb-4">Intelligent Quest Lines</h3>
+<p class="text-sm mb-6 max-w-[200px]">Our AI doesn't just list tasks; it crafts story arcs. Your report is now a 'Boss Battle'.</p>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-2 font-bold text-xs">
+<span class="material-symbols-outlined bg-white p-1 border-[2px] border-on-background">check_circle</span>
+                    Automated XP Tracking
+                </div>
+<div class="flex items-center gap-2 font-bold text-xs">
+<span class="material-symbols-outlined bg-white p-1 border-[2px] border-on-background">group</span>
+                    Multiplayer Team Raids
+                </div>
+</div>
+<div class="relative mt-4">
+<img class="w-full border-[3px] border-on-background rounded-t-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq-gRaMfKITZN855wlDononBYCCfVv0JYS8iLgao4bJ3QzGCNxG4iMxCZsBweniYQLCH_HE0_3YRRe_NhZLodjx_i_6Ch_gdP85F78oFJXtiF27xE8g9ezv0eT-qfhP4vrtCLlz90dsjKNYvS91u8xQNh12ofYVpvoSuEG5Chrtj3AmGFD7Y0R9gOMdMOike0SXPhOQqSo8z8p2es9t1x7yoMfHp5BuFn22TE2yhw8aHL8KTjT4bE-YGSvwERxjBDnBKA-qOpGnYzW">
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Hall of Fame -->
+<div class="bento-red border-[3px] border-on-background p-4 neo-shadow flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">emoji_events</span>
+<h3 class="text-xl font-bold">Hall of Fame</h3>
+</div>
+<p class="text-xs opacity-90">Global productivity arena.</p>
+</div>
+<!-- Deep Stats -->
+<div class="bento-blue border-[3px] border-on-background p-4 neo-shadow relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+<h3 class="text-xl font-bold">Deep Stats</h3>
+</div>
+<img class="absolute bottom-[-10%] right-[-10%] w-3/4 opacity-40 border-[2px] border-on-background rounded-lg rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRfk6-bNtiif-PAph1vfe8O1r84FDhDP4bfdWe6eOXE8Juc4BDXOfu0JZG-lfkizxVcZHT1u-xi42gnPcavGsuooX6xJWOmuZJRcVU-FM7XPrnuvuHNL4OBLmZQXYhQ_9viqcecQjn-oYd4TfVKPEXx7zO4iOPbEs9S0aH7cP8ZT3Gohytyu4KbSO9eKtPv7bcm_4t5vFiLpj5aFxBdXxmOK6LIxpfGA2TdvDLK-9NmIaGXvu3vw65eaNIbpShTz4OBuvvRh2VzgcR">
+</div>
+</div>
+<!-- Total Control -->
+<div class="bento-white border-[3px] border-on-background p-6 neo-shadow flex gap-4 overflow-hidden">
+<div class="flex-1">
+<h3 class="text-xl font-bold mb-2">Total Control</h3>
+<p class="text-xs mb-4">Tune Saarthi to fit how you focus.</p>
+<div class="bg-primary-fixed p-3 border-[3px] border-on-background neo-shadow inline-block">
+<span class="material-symbols-outlined">settings</span>
+</div>
+</div>
+<div class="flex-1 flex items-end">
+<img class="w-full border-[2px] border-on-background rounded-lg translate-x-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLq5os8jaKI-M-6JX3pXd-XCx4EQaZqHcZUkdd3JC1pvbnLDNBhZhg2aqG4j4od96dyGdZWhlVr9uo_VEyF-o6pTZ2XDTm35acQDq9U4qSm_lqLVzkyB9wUKhDH8oGVaiva_0f2ip3STgiu0HpkAk1aqwP9Yp5C28jb-TeLdyWvZjT1GK1K_f1EerAJlDptd3ARfP0ATYQR2sLx0KhDyFMGO7NT5hRXe5hPkFO0p-h3gJHmr9f2AGhoP8AoRM5Xj7HPFA1Jx8tdr9U">
+</div>
+</div>
+<!-- CTA -->
+<div class="bento-purple border-[3px] border-on-background p-6 neo-shadow text-center" id="ready-to-play">
+<h3 class="text-2xl font-bold mb-6">Ready to play?</h3>
+<div class="flex flex-col gap-3"><button class="bg-white text-on-background font-bold py-3 border-[3px] border-on-background neo-shadow neo-shadow-hover neo-shadow-active transition-all flex items-center justify-center gap-2" onclick="window.location.href='https://play.google.com/store/apps/details?id=app.saarthiai.taskplanner'">
+    Get it on Play Store
+</button>
+<a href="Saarthi_AI_Productivity_Assistant_Report_Detailed_40_Page_Final_A4.docx" download class="bg-on-background text-white font-bold py-3 border-[3px] border-on-background neo-shadow neo-shadow-hover neo-shadow-active transition-all flex items-center justify-center gap-2 inline-block">
+    <span class="material-symbols-outlined">download</span>
+    Download Report
+</a></div>
+</div>
+</section>
+<!-- Command Center -->
+<section class="bg-white border-[3px] border-on-background p-6 neo-shadow overflow-hidden">
+<div class="mb-8">
+<div class="flex justify-between items-start mb-4">
+<h2 class="text-3xl font-extrabold">The Command Center</h2>
+<div class="bg-secondary-fixed text-on-secondary-fixed font-bold text-xs px-3 py-1 border-[2px] border-on-background neo-shadow rotate-2">
+                    STREAK: 12 DAYS 🔥
+                </div>
+</div>
+<p class="text-on-surface-variant">Your cockpit for high-velocity execution.</p>
+</div>
+<div class="bg-surface-container rounded-xl p-6 border-[3px] border-on-background relative flex justify-center overflow-hidden">
+<img class="w-full max-w-[280px] border-[4px] border-on-background neo-shadow rounded-[2rem] z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSyMltkg8tMJn7xTsmyYmlsuV2wWp5RMeILMCkkdyFhATMSlSI6kdZOsgBKduHcvQPqZ1EVx-jOnLkv1q4RjiLdPTfmSiz3QEt0opPE2KjK5lThcDe-V9vWxpDxNbnS9TerOMWVVf06-sb5smJ2pTQOLsPNVDxY0YgBpBEWMbLbVoZjcfGd7VwM0J-U9ISWr4NetLMdFxfj3xxsl_3JmmQO9wuyhTEcnLhtwUGwAYBlk8mFNZmpE7DIveaIRGuT2rOX2izpB8OXjFc">
+<div class="absolute -bottom-8 -left-8 w-24 h-24 bg-secondary rounded-full border-[3px] border-on-background opacity-50"></div>
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-tertiary rounded-full border-[3px] border-on-background opacity-50"></div>
+</div>
+</section>
+<!-- The Squad -->
+<section class="space-y-8">
+<h2 class="text-3xl font-extrabold text-center">The Squad</h2>
+<div class="grid grid-cols-1 gap-6">
+<!-- Ankit -->
+<div class="bg-white border-[3px] border-on-background p-6 neo-shadow flex items-center gap-6">
+<div class="h-20 w-20 rounded-full border-[3px] border-on-background overflow-hidden flex-shrink-0 bg-secondary-container">
+<img alt="Ankit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBivbE49vdbftjLNWbVb11WYn0Fn3eKmQ5IeKjktaLnXTRve_VmxEz1bAIL3Pvz-e-vg5Oh-Yj1FDwlsUW8L1qIFRwI_1r_CZyekYkVcmMaVMxYS8RLDTXR1zrtCQGlasl-zvReTp65-Xl-S5l5WU4w4KLz8rxVqiU2IpT1jUxt0NjNsmXGZdUMPU-oXmZdKCiBhrFDWU-YQjOuBVaWtAIKZtoxncx2dTNM7ZfFf-D71SDE-T6azR16ev_CF-lhE9B2ZtftkoQI-zxK">
+</div>
+<div class="flex-grow space-y-2">
+<h3 class="font-bold text-xl leading-none">Ankit</h3>
+<p class="text-on-surface-variant text-sm">Lead Architect</p>
+<div class="flex gap-4">
+<a class="text-on-background hover:text-primary transition-colors" href="https://github.com/PalAnkit34"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-on-background hover:text-secondary transition-colors" href="https://www.instagram.com/pal_ankit2005?igsh=NXlva2QxMnJ3MHVw"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+</div>
+<!-- Ashish -->
+<div class="bg-white border-[3px] border-on-background p-6 neo-shadow flex items-center gap-6">
+<div class="h-20 w-20 rounded-full border-[3px] border-on-background bg-tertiary flex items-center justify-center text-white flex-shrink-0">
+<span class="material-symbols-outlined text-4xl">person</span>
+</div>
+<div class="flex-grow space-y-2">
+<h3 class="font-bold text-xl leading-none">Ashish</h3>
+<p class="text-on-surface-variant text-sm">UI Mastermind</p>
+<div class="flex gap-4">
+<a class="text-on-background hover:text-primary transition-colors" href="https://github.com/PalAnkit34"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-on-background hover:text-secondary transition-colors" href="https://www.instagram.com/pal_ankit2005?igsh=NXlva2QxMnJ3MHVw"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+</div>
+<!-- Jayraj -->
+<div class="bg-white border-[3px] border-on-background p-6 neo-shadow flex items-center gap-6">
+<div class="h-20 w-20 rounded-full border-[3px] border-on-background bg-primary-container flex items-center justify-center text-on-background flex-shrink-0">
+<span class="material-symbols-outlined text-4xl">person</span>
+</div>
+<div class="flex-grow space-y-2">
+<h3 class="font-bold text-xl leading-none">Jayraj</h3>
+<p class="text-on-surface-variant text-sm">Backend Wizard</p>
+<div class="flex gap-4">
+<a class="text-on-background hover:text-primary transition-colors" href="https://github.com/PalAnkit34"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-on-background hover:text-secondary transition-colors" href="https://www.instagram.com/pal_ankit2005?igsh=NXlva2QxMnJ3MHVw"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-high border-t-[3px] border-on-background px-8 py-12">
+<div class="flex flex-col items-center gap-8">
+<div class="flex items-center gap-3">
+<img alt="Saarthi Logo" class="h-10 w-10 border-[2px] border-on-background rounded-lg neo-shadow bg-on-background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsYvKSRGb18g3KoZ1EuZeB-h4u0ecBexfTTlK2XlLGzTMNymIH9-bHbxtbbssPwWqObIYNVXMhMHhBNZ32Gu9Vr2gaReuI3uJohH08BANjxq479uHbfoqXJ2EX_Vo93RxBhUPsnBwZILo8ENzB8oUPdBxDWDVhUUlnIxNO4w07BfTaIe075fyVjcrITAOBC9hbtOhMqzCR_5UtQFWUY_qfTnqjE8G8lCGfHsZy0ExR-7LJT_WDm5qXyttWiGG0b8snF-ddH4eq6dmZ">
+<span class="font-bold text-2xl tracking-tighter">Saarthi Ai</span>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4 text-center">
+<a class="font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Support</a>
+<a class="font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Twitter</a>
+</div>
+<a href="Saarthi_AI_Productivity_Assistant_Report_Detailed_40_Page_Final_A4.docx" download class="w-full bg-primary-container py-4 border-[3px] border-on-background neo-shadow neo-shadow-hover neo-shadow-active transition-all font-bold uppercase flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>Download Report
+    </a>
+<p class="text-center text-xs text-on-surface-variant font-bold opacity-70">
+            © 2024 Saarthi Gamified Systems. Built with Playful Precision.
+        </p>
+</div>
+</footer>
+<!-- BottomNavBar -->
+
+
+
+
+
+</body></html>
